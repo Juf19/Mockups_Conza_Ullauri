@@ -1,50 +1,36 @@
 
 import './App.css';
 import React from "react";
-//import ItemRestaurante from './componentes/itemRestaurante';
 import ItemHeader from './componentes/ItemHeader';
 import ItemBajoHeader from './componentes/ItemBajoHeader';
+import SelectorCancha from './componentes/SelectorCancha';
+import MapContainer from './componentes/MapContainer';
 
-/*const restaurantes=[{nombre: "Restaurante", tipo: "tradicional", horario: "12:00 - 13:00", img:"https://www.eluniverso.com/resizer/v2/QSEP36JJINARHAWMPQL6VVP5NQ.jpg?auth=0a320930e9df5c511d9122917b36f25737e5f08ea71d460ae106dfc7fb7d0d64&width=1005&height=670&quality=75&smart=true"},
-  {nombre: "Restaurante Pepito", tipo: "parrillada", horario: "12:00 - 13:00"},
-  {nombre: "Restaurante Fabiola", tipo: "tradicional", horario: "12:00 - 13:00"}
-]*/
-const texto=[{nombre: "LA CAROLINA"}]
+const texto = [{ nombre: "LA CAROLINA" }]
 class App extends React.Component {
-  render (){
+  render() {
     return (
       <div className="App">
         <ItemHeader></ItemHeader>
         <ItemBajoHeader nombre={texto[0].nombre}></ItemBajoHeader>
+        <div className="app-container">
+          <div className="left-content">
+          <SelectorCancha></SelectorCancha>
+          </div>
+          <div className="right-map">
+            <MapContainer></MapContainer>
+            <div className="cancha" style={{ top: '10%', left: '57%' }}>C-F1 ⚽</div>
+            <div className="cancha" style={{ top: '7%', left: '47%' }}>C-F2 ⚽</div>
+            <div className="cancha" style={{ top: '23%', left: '55%' }}>C-F3 ⚽</div>
+            <div className="cancha" style={{ top: '40%', left: '27%' }}>C-B1 🏀</div>
+          </div>
+        </div>
 
       </div>
-      /*<div className="App">
-      <h1>Bienvenido ñanec</h1>
-      {this.state.restaurantes.map((rest, index)=> (<ItemRestaurante key = {index} nombre = {rest.nombre} tipo={rest.tipo} horario = {rest.horario}></ItemRestaurante>))}
-      
-      <button onClick={this.insertarNuevo}>Insertar nuevo</button>
-      </div>*/
-      
+
     );
-   }
-    
-   /*insertarNuevo = ()=>{
-     //  restaurantes.push({nombre:"comedor", tipo:"peruana", horario:"14-20"})
-       //const nuevaLista = [...restaurantes]
-       //nuevaLista.push({nombre:"comedor", tipo:"peruana", horario:"14-20"})
-       this.setState(prevState => ( {restaurantes: [...prevState.restaurantes, {nombre:"comedor", tipo:"peruana", horario:"14-20"} ]}))
-        restaurantes.forEach((r)=> console.log(r));
-      
-   }*/
-
-   /*constructor (props){
-    super(props);
-    this.state = {restaurantes: [{nombre: "Restaurante", tipo: "tradicional", horario: "12:00 - 13:00",img:"https://www.eluniverso.com/resizer/v2/QSEP36JJINARHAWMPQL6VVP5NQ.jpg?auth=0a320930e9df5c511d9122917b36f25737e5f08ea71d460ae106dfc7fb7d0d64&width=1005&height=670&quality=75&smart=true"},
-      {nombre: "Restaurante Pepito", tipo: "parrillada", horario: "12:00 - 13:00"},
-      {nombre: "Restaurante Fabiola", tipo: "tradicional", horario: "12:00 - 13:00"}
-    ]}
-   }*/
-
   }
+
+}
 
 export default App;
