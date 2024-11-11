@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App3.css';
 import Tr from './componentes/Tr';
 import TriangulosConCurva from './componentes/TriangulosConCurva';
 import LoginBox from './componentes/LoginBox';
