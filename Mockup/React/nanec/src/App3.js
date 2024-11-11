@@ -13,8 +13,8 @@ class App extends Component {
     return (
       <div className="App">
         <Tr></Tr>
-        <TriangulosConCurva></TriangulosConCurva>
         <LoginBox></LoginBox>
+        <TriangulosConCurva></TriangulosConCurva>
       </div>
 
     );
