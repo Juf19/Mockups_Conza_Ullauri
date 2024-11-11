@@ -1,76 +1,79 @@
 import React, { Component } from 'react';
-import LOGOA from 'C:/Users/JuF/Documents/GitHub/Mockups_Conza_Ullauri/Mockup/React/nanec/src/componentes/LOGOA.svg';
 
 class ReservaCancha extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            deporte: '',
-            cancha: '',
-        };
-    }
-
-    handleDeporteChange = (event) => {
-        this.setState({ deporte: event.target.value });
+  constructor(props) {
+    super(props);
+    this.state = {
+      horas: 1,
+      horario: '',
+      aceptarTerminos: false
     };
+  }
 
-    handleCanchaChange = (event) => {
-        this.setState({ cancha: event.target.value });
-    };
+  handleHorasChange = (event) => {
+    this.setState({ horas: event.target.value });
+  };
 
-    handleDisponibilidad = () => {
-        alert(`Verificando disponibilidad para ${this.state.deporte} en cancha ${this.state.cancha}`);
-    };
+  handleHorarioChange = (event) => {
+    this.setState({ horario: event.target.value });
+  };
 
-    render() {
-        return (
-            <div className="app">
-                <header className="header">
-                    <img src={LOGOA} alt="Quito" className="logo" />
-                    <div className="search-bar">
-                        <input type="text" placeholder="Buscar" />
-                        <button className="search-button">🔍</button>
-                    </div>
-                    <div className="menu">
-                        <button>Reservas</button>
-                        <button>Perfil</button>
-                    </div>
-                </header>
+  handleTerminosChange = (event) => {
+    this.setState({ aceptarTerminos: event.target.checked });
+  };
+  handleReserva = () => {
+    alert(`Reservado`);
+};
 
-                <div className="title">LA CAROLINA</div>
+  render() {
+    return (
+      <div className='app'>
+        <h3>Seleccione el número de horas que desea reservar</h3>
+        <label>
+          <input type="radio" value="1" checked={this.state.horas === '1'} onChange={this.handleHorasChange} />
+          1
+        </label>
+        <label>
+          <input type="radio" value="2" checked={this.state.horas === '2'} onChange={this.handleHorasChange} />
+          2
+        </label>
 
-                <div className="container">
-                    <div className="form">
-                        <p>Seleccione en el mapa la cancha que desea reservar</p>
+        <h3>Seleccione el horario</h3>
+        <div className='menuh'>
+          <button className='horario'>8-9</button>
+          <button className='horario'>9-10</button>
+          <button className='horario'>10-11</button>
+          <button className='horario'>11-12</button>
+          <button className='horario'>12-13</button>
+          <button className='horario'>13-14</button>
+          <button className='horario'>14-15</button>
+          <button className='horario'>15-16</button>
+          <button className='horario'>16-17</button>
+          <button className='horario'>17-18</button>
+          <button className='horario'>18-19</button>
 
-                        <label>FUTBOL ⚽</label>
-                        <select value={this.state.deporte === 'futbol' ? this.state.cancha : ''} onChange={this.handleCanchaChange}>
-                            <option value="">Seleccione cancha</option>
-                            <option value="C-F1">C-F1</option>
-                            <option value="C-F2">C-F2</option>
-                            <option value="C-F3">C-F3</option>
-                        </select>
-
-                        <label>BASQUET 🏀</label>
-                        <select value={this.state.deporte === 'basquet' ? this.state.cancha : ''} onChange={this.handleCanchaChange}>
-                            <option value="">Seleccione cancha</option>
-                            <option value="C-B1">C-B1</option>
-                        </select>
-
-                        <button className="disponibilidad-button" onClick={this.handleDisponibilidad}>Disponibilidad</button>
-                    </div>
-
-                    <div className="map">
-                        <img src="mapa_carolina.png" alt="Mapa de la Carolina" className="map-image" />
-                        <div className="cancha" style={{ top: '50%', left: '60%' }}>C-F1 ⚽</div>
-                        <div className="cancha" style={{ top: '60%', left: '65%' }}>C-F2 ⚽</div>
-                        <div className="cancha" style={{ top: '70%', left: '60%' }}>C-F3 ⚽</div>
-                        <div className="cancha" style={{ top: '40%', left: '50%' }}>C-B1 🏀</div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+        </div>
+        <h3>Aceptar términos y condiciones</h3>
+        <label>
+          <input
+            type="checkbox"
+            checked={this.state.aceptarTerminos}
+            onChange={this.handleTerminosChange}
+          />
+          <span> Usted está aceptando que cumplirá con el horario establecido y que en caso de cancelar lo realizará con al menos 48 horas de antelación</span>
+        </label>
+        <div className="form1">
+        <div className='item1'>
+        <button className="disponibilidad-button"> Atras </button>
+        </div>
+        <div className='item1'>
+        <button className="disponibilidad-button" onClick={this.handleReserva}>Reservar</button>
+        </div>
+        </div>
+        
+      </div>
+    );
+  }
 }
 
 export default ReservaCancha;
