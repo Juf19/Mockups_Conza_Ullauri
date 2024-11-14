@@ -31,7 +31,10 @@
   
   .header {
     flex: 1 ;
+    
     margin-bottom: 20px;
+    margin-left: 90px;
+    background-color: #0c5b99;
   }
   
   .emblem {
@@ -141,8 +144,7 @@
     flex-direction: column;
     align-items: center;
      flex: 1;
-  
-     
+
      border: 2px solid #010388;
      border-radius: 20%;
      width: 500px;
@@ -183,44 +185,37 @@
   }
   
   
-  
-  .izquierda{
+  .izquierda {
     height: 95%;
     flex: 2;
     display: flex;
-    
-     /* Espacio entre los triángulos */
+  
+    /* Espacio entre los triángulos */
   }
   
   .derecha {
     flex: 2;
     height: 95%;
     display: flex;
-    
+  
     justify-content: end;
   
-     /* Espacio entre los triángulos */
+    /* Espacio entre los triángulos */
   }
   
-  .triangulo {
-    width: 0;
-    height: 0px;
-    border-left: 37px solid transparent;
-    border-right: 35px solid transparent;
-    border-bottom: 30px solid #ffffff; /* Color blanco */
-    border-radius: 30px; /* Ajuste para esquinas redondeadas */
-  }
+  
   
   .contenedor-onda {
     flex: 14;
-   
-    height: 40px; /* Ajusta según el tamaño de la onda */
+  
+    height: 40px;
+    /* Ajusta según el tamaño de la onda */
     width: 100%;
-    
+  
     padding: 25px;
     margin-bottom: 50px;
     margin-top: 20px;
-   
+  
   }
   
   .q{

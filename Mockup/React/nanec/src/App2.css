@@ -15,10 +15,14 @@
   .parques-list h2 {
     text-align: left;
     margin-left: 20px;
-    margin-top: 1px;
+   
     font-family: "Pathway Extreme";
     font-weight: 100;
     font-size: 30px;
+    color: black;
+    margin-bottom: 6px;
+    
+    
   }
   
   .parques {
@@ -35,9 +39,9 @@
   }
   
   .parque-image {
-    width: 95%;
-    height: 200px;
-    border-radius: 5px;
+    width: 85%;
+    height: 150px;
+    
     
   }
   

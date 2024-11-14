@@ -25,7 +25,7 @@ class SelectorCancha extends Component {
             <div className="form">
                 <div className='item'>
                     <h3>Seleccione en el mapa la cancha que desea reservar</h3>
-                    <label>FUTBOL ⚽</label>
+                    <label className='futbol'>FUTBOL ⚽</label>
                     <select value={this.state.deporte === 'futbol' ? this.state.cancha : ''} onChange={this.handleCanchaChange}>
                         <option value="">Seleccione cancha</option>
                         <option value="C-F1">C-F1</option>
@@ -34,7 +34,7 @@ class SelectorCancha extends Component {
                     </select>
                 </div>
                 <div className='item'>
-                    <label>BASQUET 🏀</label>
+                    <label className='basquet'>BASQUET 🏀</label>
                     <select value={this.state.deporte === 'basquet' ? this.state.cancha : ''} onChange={this.handleCanchaChange}>
                         <option value="">Seleccione cancha</option>
                         <option value="C-B1">C-B1</option>

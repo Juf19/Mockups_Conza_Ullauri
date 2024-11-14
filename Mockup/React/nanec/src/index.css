@@ -30,6 +30,7 @@ code {
 }
 
 .azul {
+  height: 20px;
   width: 50%;
   background-color: #27357d;
   padding: 5px 20px;
@@ -45,20 +46,26 @@ h2 {
 }
 
 .logo {
-  width: 50px;
+  width: 100px;
+  height: 97px;
 }
 
 .search-bar input {
   padding: 5px;
-  width: 500px;
-  
+  width: 450px;
+  height: 25px;
   border-radius: 30px;
-  
+  background-color: none;
+   font-size: 20px;
+   text-align: inherit;
+   font-family: "Pathway Extreme";
+    
 }
 
 .search-button {
   margin-left: 5px;
   cursor: pointer;
+  background-color: #1575ba;
 }
 
 .menu button {
@@ -98,26 +105,25 @@ h2 {
 }
 
 .icono {
-  width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
-  height: 40px;
+  width: 75px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 60px;
   margin-bottom: 5px; /* Espacio entre la imagen y el texto */
   align-items: center;
+  margin-right: 60px;  
 }
 
 .menu-text {
   background: none;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 25px;
   cursor: pointer;
   align-items: center;
+  margin-right: 60px; 
+  font-family: "Pathway Extreme";
 }
 
-.icono {
-  width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
-  height: 30px;
-  margin-bottom: 5px; /* Espacio entre la imagen y el texto */
-}
+
 
 .title {
   background-color: #333;
@@ -225,3 +231,27 @@ width: 100%;
   border-radius: 5px;
   font-size: 14px;
 }
+.futbol, .basquet{
+  text-align: start;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 25px;
+  text-align: start;
+  margin-left: 30px;
+}
+span{
+  font-size: 25px;
+  text-align: start;
+  margin-left: 20px;
+
+}
+
+label, input{
+  width: 25px;
+  height: 25px;
+  margin-left: 35px;
+  font-size: 30px;
+}
+
