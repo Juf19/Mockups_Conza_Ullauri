@@ -234,6 +234,7 @@ width: 100%;
 .futbol, .basquet{
   text-align: start;
   font-size: 18px;
+  margin: 30px;
 }
 
 h3 {
